@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+
+.App{
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.dohover{
+    :hover{
+        background-color:"#4db6ac";
+    }
+}
+
+@media screen and (max-device-width: 320px)
+    {
+    .imagecontainer {
+       display: none;
+    }
+    .form{
+        height:"90%";
+       
+    }
+   
+    .lefthead{
+        width:"30px"
+    }
+    .icon{
+        display: none;
+    }
+}

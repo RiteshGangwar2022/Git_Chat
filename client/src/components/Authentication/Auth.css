@@ -1,0 +1,32 @@
+.main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagecontainer{
+
+    flex:5;
+}
+
+.img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+   
+}
+
+.form{
+    flex:3;
+    
+}
+@media screen and (min-device-width: 380px)and(max-device-width: 480px){
+   
+    .imagecontainer{
+        flex:3;
+    }
+
+}
