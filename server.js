@@ -19,11 +19,6 @@ app.use(express.urlencoded({limit: '50mb', extended: true, parameterLimit: 50000
 app.use(cors());
 
 
-//for deployment
-app.use(express.static(path.join(__dirname, "./client/build")))
-app.get("*",(req,res)=>{
-    res.sendFile(path.join(__dirname, "./client/build/index.html"))
-})
 
 
 // User routes
@@ -41,12 +36,21 @@ app.use(notFound);
 app.use(errorHandler);
 
 
+
 //for deployment
 app.use(express.static(path.join(__dirname, "./client/build")))
 app.get("*",(req,res)=>{
     res.sendFile(path.join(__dirname, "./client/build/index.html"))
 })
 
+
+
+//getting port from env file
+const port=process.env.PORT;
+
+const server=app.listen(port,(()=>{
+    console.log("server is running on port ");
+}));
 
 
 
